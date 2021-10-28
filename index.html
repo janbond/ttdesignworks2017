@@ -1,0 +1,294 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="第六屆電腦遊戲玩家的異想世界">
+<meta name="description" content="第六屆電腦遊戲玩家的異想世界">
+<title>第六屆電腦遊戲玩家的異想世界</title>
+<link href="favicon.ico" rel="icon">
+<link href="favicon.ico" rel="shortcut icon">
+<link href="apple-touch-icon.png" rel="apple-touch-icon">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/jquery.maximage.css" rel="stylesheet">
+<link href="js/plugins/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="js/plugins/jQuery/jquery-1.8.3.min.js"></script>
+<script src="js/plugins/jquery.cycle.all.min.js"></script>
+<script src="js/plugins/jquery.maximage.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+jQuery(document).ready(function(e) {
+	
+	$('#maximage').maximage({
+		cycleOptions: {
+			fx: 'fade',
+			speed: 1000, // Has to match the speed for CSS transitions in jQuery.maximage.css (lines 30 - 33)
+			timeout: 0,
+			prev: '#arrow_left',
+			next: '#arrow_right',
+			pause: 1,
+			before: function(last,current){
+				if(!$.browser.msie){
+					// Start HTML5 video when you arrive
+					if($(current).find('video').length > 0) $(current).find('video')[0].play();
+				}
+			},
+			after: function(last,current){
+				if(!$.browser.msie){
+					// Pauses HTML5 video when you leave it
+					if($(last).find('video').length > 0) $(last).find('video')[0].pause();
+				}
+			}
+		},
+		onFirstImageLoaded: function(){
+			jQuery('#cycle-loader').hide();
+			jQuery('#maximage').fadeIn('fast');
+		}
+	});
+	
+	$('#menu ul li').click(function() {
+    $('li').removeClass("active");
+    $(this).addClass("active");
+	});
+	
+	$("a[href*=#]:not([href=#])").click(function() {
+		 var target = $(this.hash);
+		 $("html,body").animate({
+				 scrollTop: target.offset().top
+		 }, 1000);
+		 //return false;
+	});
+	
+		
+});
+</script>
+</head>
+<body>
+<div class="iconSign floatFrame"><a href="winner.html"><img src="images/icon_sign.png" width="210" height="98" alt="我要報名"></a></div>
+<div id="header">
+  <div class="headerWrap">
+    <h1 title="第六屆電腦遊戲玩家的異想世界">
+      <a href="./" title="第六屆電腦遊戲玩家的異想世界"></a>
+    </h1> 
+    <div id="menu">
+      <ul>
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">比賽說明</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">主題說明</a></li>
+        
+        <li data-menuanchor="4thPage"><a href="#3thPage">創作時程</a></li>
+        <li data-menuanchor="6thPage"><a href="#4thPage">評審及獎勵</a></li>
+        <li data-menuanchor="6thPage"><a href="winner.html">得獎名單</a></li>
+        <!--<li data-menuanchor="7thPage"><a href="#5thPage">主辦單位</a></li>-->
+        <li data-menuanchor="7thPage"><a href="https://www.facebook.com/ThermaltakeTW" title="Thermaltake FB" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+        <!--<li data-menuanchor="6thPage"><a href="#6thPage">校園說明會</a></li>
+        <li data-menuanchor="7thPage"><a href="#7thPage">活動剪影</a></li>-->
+      </ul>
+    </div>
+    
+  </div>
+</div>
+
+<div class="iBanner">
+  <img id="cycle-loader" src="images/ajax-loader.gif" />
+  <div id="maximage">
+    <div>
+      <img src="images/i_banner.jpg" alt="">
+      
+    </div>
+    
+  </div>
+</div>
+<div class="iCont">
+	<div id="firstPage" class="infoWrap">
+  	<div class="infoBox">
+    	<div class="ti">前言</div>
+      <div class="txt">
+      	曜越科技股份有限公司 ( Thermaltake Technology Co., Ltd.) 創立於 1999 年，以前瞻性的創意與獨特性的設計廣受電腦玩家好評，公司本著 『致力創造完美的使用者經驗』理念，以及『享受娛樂、電競、科技、生活的文化品牌』為職志，希望結合產學的合作，舉辦回饋社會的各項活動。因此，期待藉此設計比賽， 除了可以為產品激盪更多的創意設計構思能力，也為即將著墨於產品設計開發的學子提供一個創新創意的經驗平台。
+      </div>
+    </div>
+    <div class="infoBox">
+    	<div class="ti">活動目的</div>
+      <div class="txt">
+      	<ul>
+        	<li>提供對產品設計有興趣的學生一個實務經驗的舞台</li>
+          <li>發掘，鼓勵具潛力的設計新人</li>
+          <li>結合學術界與產業界，為產品創新提供多元的管道</li>
+        </ul>
+      </div>
+    </div>
+    <div class="infoBox">
+    	<div class="ti">主辦單位</div>
+      <div class="txt">
+      	<a href="http://tw.thermaltake.com/" title="thermaltake" target="_blank"><img src="images/i_zone_2_icon_1.png"></a>
+      </div>
+    </div>
+    <div class="infoBox">
+    	<div class="ti">協辦單位</div>
+      <div class="txt">
+      	<a href="http://www.ttu.edu.tw/bin/home.php" title="大同大學" target="_blank"><img src="images/i_zone_2_icon_2.png"></a>
+        <a href="https://www.ntut.edu.tw/bin/home.php" title="國立臺北科技大學" target="_blank"><img src="images/i_zone_2_icon_3.png"></a>
+        <a href="http://www.ntust.edu.tw/home.php" title="國立台灣科技大學" target="_blank"><img src="images/i_zone_2_icon_4.png"></a>
+        <a href="http://web.ncku.edu.tw/bin/home.php" title="國立成功大學" target="_blank"><img src="images/i_zone_2_icon_8.png"></a>
+        <a href="http://www.lhu.edu.tw/" title="龍華科技大學" target="_blank"><img src="images/i_zone_2_icon_5.png"></a>
+        <a href="http://www2.usc.edu.tw/usc/tw/client/index.asp" title="實踐大學" target="_blank"><img src="images/i_zone_2_icon_6.png"></a>
+      </div>
+    </div>
+  </div>
+  <div class="themeWrap">
+  	
+  	<div id="secondPage" class="themeBox">
+    	<div class="bigTi">主<br>題</div>
+      <div class="word">
+      	<div class="ti">電玩玩家最得意的裝備 電競配備 + IOT/AI</div>
+        <div class="txt">
+          <ul>
+            當您企圖融入電玩的虛擬世界，您希望有什麼樣的輔助設備是最令您期待的？是能與手指結合的高觸感<span class="blueTxt">滑鼠、鍵盤</span>？還是不會產生壓迫感的酷炫<span class="blueTxt">耳機</span>？也可能是提供筆記型電腦降低溫度的<span class="blueTxt">散熱器</span>？或是具有獨特個性的<span class="blueTxt">電腦機殼</span>？請透過觀察、分析玩家與電玩之間互動的模式，提出協助玩家提升技能，融入遊戲情境，或是感到更舒適的設計方案。<br><br>
+            將<span class="blueTxt">物聯網(IOT)</span>的概念或是<span class="blueTxt">人工智慧(AI)</span>的概念加入上述設計產品中，例如耳機可以因為使用狀態(文書處理、賽車、射擊…等)而改變聲音輸出狀態，機殼也可以因環境明暗程度而自動調整情境照明，電競椅因為天氣跟體溫而改變椅背溫度設定。<br><br>
+            請參賽者發揮無限的想像，經由『<span class="blueTxt">熱情、瘋狂、可行</span>』這三大元素，並考量合理化的技術與科技條件。
+          </ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div id="3thPage" class="timeBox">
+    	<div class="timeTi">創<br>作<br>時<br>程</div>
+      <div class="timeInfo margL47P">
+      	<div class="digCircle floatL">二月</div>
+        <div class="cont floatL margL3P">
+        	<p><i class="fa fa-caret-right"></i>&nbsp;校園解說</p>
+          到各校( 大同，北科，台科，成大，實踐，龍華 )與參與學生說明活動內容、創意方向、展現方式、獎勵內容<br><br>
+          <p><i class="fa fa-caret-right"></i>&nbsp;創作過程</p>
+          各校安排時程, 並訂出具體創新產品與方向，參與學生可與曜越公司保持聯繫，詢問或是確認細節，曜越將給予人員或是相關技術說明<br>
+        </div>
+      </div>
+      
+      <div class="timeInfo margL08P">
+      	<div class="digCircle floatR">四月</div>
+        <div class="cont floatR margR3P">
+        	<p><i class="fa fa-caret-right"></i>&nbsp;初審收件方式</p>
+          <span class="redTxt">2017 年 4 月 18 日(星期二)下午 5:00 前</span>將作品與資料送達收件處: <span class="redTxt">台北市內湖區堤頂大道二段 185 號 5 樓，曜越科技創意設計中心收</span>請以郵寄方式或親自送件，並自行斟酌郵寄時間，逾期不受理。<br><br>
+          <p><i class="fa fa-caret-right"></i>&nbsp;作品呈現方式</p>
+          裱板二~四張<br>
+          尺寸為 420mm x 297mm (A3)，以3-5mm厚風扣板裱褙，裱板內容自由發揮，但請包含下列項目:<br>
+          <span class="redTxt">
+            <i class="fa fa-paperclip"></i>&nbsp;主要創作概念與特色。<br>
+            <i class="fa fa-paperclip"></i>&nbsp;作品圖面: 含尺寸及配置之三視圖與外觀彩現效果圖，以能夠闡述設計特點與產品型態為原則。<br>
+            <i class="fa fa-paperclip"></i>&nbsp;文字說明: 中文說明1200字內( 包含: 設計理念、材料說明、使用場合、其他創意特點等 )。<br>
+            <i class="fa fa-paperclip"></i>&nbsp;裱板背面貼上設計者姓名、學校、作品名稱、連絡電話。<br>
+          </span>
+        </div>
+      </div>
+      
+      <div class="timeInfo margL47P">
+      	<div class="smaCircle floatL"></div>
+        <div class="cont floatL margL3P">
+        	<p><i class="fa fa-caret-right"></i>&nbsp;入選通知</p>
+          <span class="redTxt">2017 年 4 月 21 日(星期五)</span>於<span class="redTxt">http://creativedesign.ttdesignworks.com/</span>公告通知入選作品。<br><br>
+          <p><i class="fa fa-caret-right"></i>&nbsp;參觀曜越科技總部</p>
+          通過初賽之參賽者於 2017 年 4 月 28 日(星期五)下午 1:30，在曜越科技總部( 台北市內湖區堤頂大道二段 185 號 5 樓 )進行初選頒獎，(未能出席者，將取消初賽得獎獎品)，以及參觀公司辦公環境。<br><br>
+          <p><i class="fa fa-caret-right"></i>&nbsp;創意設計作品研討會</p>
+          通過初賽之參賽者，請參加 2017 年 4 月 28 日(星期五)下午 2:00 於曜越科技總部( 台北市內湖區堤頂大道二段 185 號 5 樓 )所舉辦的創意設計作品研討會，將有資深設計師與參賽者一起針對所設計的作品深入討論。
+        </div>
+      </div>
+      
+      <div class="timeInfo margL08P">
+      	<div class="digCircle floatR">六月</div>
+        <div class="cont floatR margR3P">
+          <p><i class="fa fa-caret-right"></i>&nbsp;期末作品參賽需知</p>
+          <span class="redTxt">1:1 實物模型</span>和<span class="redTxt">光碟一張</span>
+          ( 設計圖以及設計作品之複賽簡報資料 )光碟片上應註明報名序號，作品名稱，以及姓名。檔案格式為 JPEG 或 TIFF 檔，解析度 300 dpi 以上。<br><br>
+        	<p><i class="fa fa-caret-right"></i>&nbsp;收件</p>
+          <span class="redTxt">2016 年 6 月 16日 (星期五)下午 1:30 前</span>，將複賽作品與資料攜帶至曜越科技總部( 台北市內湖區堤頂大道二段 185 號 5 樓 )。<br><br>
+          <p><i class="fa fa-caret-right"></i>&nbsp;簡報</p>
+          <span class="redTxt">2016 年 6 月 16 日(星期五)下午 2:30</span>，入選者在曜越科技總部舉行比賽作品簡報說明，作品簡報 5 分鐘，評審提問 5 分鐘。<br><br>
+          <p><i class="fa fa-caret-right"></i>&nbsp;頒獎</p>
+          <span class="redTxt">2016 年 6 月 16 日(星期五)下午 5:30</span>，在曜越科技總部( 台北市內湖區堤頂大道二段 185 號 5 樓 )舉行頒獎典禮。將於 10 個工作天內發給模型製作補助經費與獎狀。( 補助經費以發票金額為憑據，每組最高 NTD 20,000 元，發票需打上統一編號: 70669172， 抬頭為: 曜越科技股份有限公司 )。
+        </div>
+      </div>
+      
+      <div class="timeShadow"></div>
+      
+    </div>
+    <div id="4thPage" class="judgeBox">
+    	<div class="judgeBlock">
+        <div class="judgeInfo">
+          <div class="bigTi">評<br>審<br>辦<br>法</div>
+          <div class="word">
+            <div class="ti">評審規則</div>
+            <div class="txt">
+              評審委員針對進入複賽之展板，模型，以及現場作品解說…依照評分標準，選出各名次。<br><br>
+            </div>
+            <div class="ti">評審委員</div>
+            <div class="txt">
+              由主辦單位遴選國內設計專業人事與產業專家擔任評選。<br><br>
+            </div>
+            <div class="ti">評審標準</div>
+            <div class="txt">
+              <span class="redTxt">設計創意: 35%</span> ( 考量產品設計之原創性、獨特性等 )<br>
+              <span class="redTxt">外觀造型: 30%</span> ( 考量造型之美學、細節處理、新穎性、考量人因工程、操作、介面等 )<br>
+              <span class="redTxt">可行評估: 35%</span> ( 考量可行性、製造成本等 )
+            </div>
+          </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="judgeInfo">
+          <div class="bigTi">獎<br>勵<br>辦<br>法</div>
+          <div class="word">
+            <div class="ti">獎項</div>
+            <div class="txt">
+              <span class="redTxt">金獎:</span> 一組 每組各得 新台幣 100,000 元、獎狀一幀、獎品一份。<br>
+              <span class="redTxt">銀獎:</span> 一組 每組各得 新台幣 30,000 元、獎狀一幀、獎品一份。<br>
+              <span class="redTxt">銅獎:</span> 一~三組 每組各得 新台幣 10,000 元、獎狀一幀、獎品一份。<br>
+              <span class="redTxt">佳作:</span> 數組 每組各得 新台幣  3,000 元、獎狀一幀、獎品一份。<br><br>
+            </div>
+            <div class="ti">備註</div>
+            <div class="txt">
+              所有得獎獎品均以組為單位，不因組成人數多寡而異。得獎者需填寫勞務單，以做為獎金所得證明。<br>獎品為曜越科技產品，主辦單位將依情況調配獎品內容。
+            </div>
+          </div>
+          <div class="clearer"></div>
+        </div>
+      </div>
+      <div class="contactZone">
+        <div class="contactBox">
+        <span class="ti"><img src="images/contact_logo.png" width="50" height="50" alt="曜越科技股份有限公司">&nbsp;曜越科技股份有限公司</span>
+        <table class="contactTab">
+          <tr>
+            <th><i class="fa fa-map-marker"></i></th>
+            <td>11493 台北市內湖區堤頂大道二段185號5樓</td>
+          </tr>
+          <tr>
+            <th><i class="fa fa-globe"></i></th>
+            <td>http://creativedesign.ttdesignworks.com</td>
+          </tr>
+          <tr>
+            <th><i class="fa fa-envelope"></i></th>
+            <td>ttdesign@thermaltake.com</td>
+          </tr>
+        </table>
+        <span>本競賽規則，若有變動，以網站公佈為準。</span>
+        </div>
+        <div class="otherBox">
+        獎金依中華民國所得稅法規定須扣除總額獎金之10%。<br><br>
+  
+        參賽作品須由本人單獨親自設計，並以本人真實身份資料投稿，不得以假名參加比賽，且作品需為尚未以任何形式公開發表於各類媒體、具有原創性之新作，且無抄襲仿冒情事，若經發現參賽作品涉及智慧財產權相關法律責任或侵害第三人權利時，主辦單位得取消其參賽資格；若為得獎作品，除取消其得獎資格，追繳回獎金外，如主辦單位因此致生損害，參賽者應負完全法律責任，不得異議。<br><br>
+      
+        複賽得獎者同意其參賽作品智慧財產權於評審得獎確定同時讓與主辦單位，並同意簽具「智慧財產權移轉同意書」；主辦單位得不限時間、次數、方式使用。參賽者並同意不行使著作人格權。<br><br>
+      
+        凡參選者均視為認同本活動簡章之各項規定，本辦法如有未盡事宜，除依法律相關規定外，得另由主辦單位公告補充之。
+        </div>
+      </div>
+    </div>
+    <div class="itemM"><img src="images/i_item_1.png"></div>
+    <div class="itemH"><img src="images/i_item_2.png"></div>
+    <div class="itemK"><img src="images/i_item_3.png"></div>
+  </div>
+</div>
+<div id="footer">Copyright © 2017 Thermaltake Technology Co., Ltd. All Rights Reserved.</div>
+
+
+
+</body>
+</html>
